@@ -1,0 +1,42 @@
+{% extends 'BookDonations/base.html' %}
+{% load static %}
+{% block 'main_content' %}
+    <div class="px-4 py-5 text-center title-section">
+        <img class="d-block mx-auto mb-4 hero-image img-fluid" src={% static 'images/hero.webp' %} alt="child smiling in a library">
+        <h1 class="display-5 fw-bold text-body-emphasis">Spread a smile through books</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">At BookMe, we aim to spread smiles to everyone through books. <b>Join us in our mission.</b> Donate your used books and help spread knowledge to others</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="button">Donate</button>
+          </div>
+        </div>
+    </div>
+    <div class="about-us-section">
+      <img alt="Two children smiling while reading a book " class="about-us-image img-fluid" src={% static 'images/about-us-image.jpeg' %} >
+        <h2 class="large-text">About us</h2>
+        <p class="large-text">At BookMe, we strive to help others. Our organization came into existence in 2023 inspired by our founder's desire to help others. 
+          You can become a member of this family that is dedicated to spread joy to millions of students and readers in Lagos.</p>
+          <button class="button" type="button">Join us</button>
+          <div class="statistics">
+            <h3 class="centered-text">Our impact<h3>
+            <ul>
+              <li class="impact-list">
+                  <b><p id="school-count"><p></b> 
+                  <p>Schools that have received books</p>
+              </li>
+              <li class="impact-list">
+                  <b><p id="book-count">300<p></b>
+                  <p>Books given out</p>
+                  
+              </li>
+            </ul>
+          </div>
+    </div>
+    <div class="reach-out-section">
+      <img alt="smiling Nigerian school children" class="reach-out-image img-fluid" src="{% static '/images/receive-image.webp' %}">
+      <h2>Reach out / Receive</h2>
+      <p>Schools and parents are welcome to apply to enable their children join the reading fun. 
+        Just click on the button below to apply</p>
+      <button class="button" type="button">Receive</button>
+    </div>
+{% endblock %}
