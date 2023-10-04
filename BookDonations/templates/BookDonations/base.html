@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <link href="{% static 'css/styles.css' %}" rel="stylesheet">
-        <title>BookMe</title>
+        <title>
+            {% block 'title' %}{% endblock %} | BookMe
+        </title>
     </head>
     <body>
       <header class="head-container light-green-background">
@@ -19,7 +21,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="{% url 'BookDonations:home' %}">Home</a>
-                    <a class="nav-link" href="">Donate</a>
+                    <a class="nav-link" href="{% url 'BookDonations:donate' %}">Donate</a>
                     <a class="nav-link" href="">Receive</a>
                     <a class="nav-link" href="">Contact us</a>
                   </div>
@@ -45,7 +47,7 @@
         <div>
           <ul class=" pb-3 mb-3">
             <li class="footer-links"><a class= "clear-text-decoration" href= "{% url 'BookDonations:home' %}">Home</a></li>
-            <li class="footer-links"><a class= "clear-text-decoration" href= "">Donate</a></li>
+            <li class="footer-links"><a class= "clear-text-decoration" href= "{% url 'BookDonations:donate' %}">Donate</a></li>
             <li class="footer-links"><a class= "clear-text-decoration" href= "">Receive</a></li>
             <li class="footer-links"><a class= "clear-text-decoration" href= "">Contact us</a></li>
           </ul>

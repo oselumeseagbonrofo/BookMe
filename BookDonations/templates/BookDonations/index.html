@@ -1,5 +1,8 @@
 {% extends 'BookDonations/base.html' %}
 {% load static %}
+{% block 'title' %}
+  Home
+{% endblock %}
 {% block 'main_content' %}
     <div class="px-4 py-5 text-center title-section">
         <img class="d-block mx-auto mb-4 hero-image img-fluid" src={% static 'images/hero.webp' %} alt="child smiling in a library">
@@ -7,8 +10,10 @@
         <div class="col-lg-6 mx-auto">
           <p class="lead mb-4">At BookMe, we aim to spread smiles to everyone through books. <b>Join us in our mission.</b> Donate your used books and help spread knowledge to others</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="button">Donate</button>
-          </div>
+            <a href = "{% url 'BookDonations:donate' %}">
+              <button type="button" class="button">Donate</button>
+            </a>  
+            </div>
         </div>
     </div>
     <div class="about-us-section">
@@ -16,15 +21,17 @@
         <h2 class="large-text">About us</h2>
         <p class="large-text">At BookMe, we strive to help others. Our organization came into existence in 2023 inspired by our founder's desire to help others. 
           You can become a member of this family that is dedicated to spread joy to millions of students and readers in Lagos.</p>
-          <button class="button" type="button">Join us</button>
+          <a href = "{% url 'BookDonations:donate' %}">
+            <button class="button" type="button">Join us</button>
+          </a>
           <div class="statistics">
             <h3 class="centered-text">Our impact<h3>
             <ul>
-              <li class="impact-list">
+              <li class="impact-list centered-text">
                   <b><p id="school-count"><p></b> 
                   <p>Schools that have received books</p>
               </li>
-              <li class="impact-list">
+              <li class="impact-list centered-text">
                   <b><p id="book-count">300<p></b>
                   <p>Books given out</p>
                   

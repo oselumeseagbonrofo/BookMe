@@ -2,6 +2,9 @@ from django.db import models
 
 # Create your models here.
 class Book_Donor(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    book_amount = models.IntegerField()
     SCHOOL_CLASS_LEVEL_CHOICES = [
         ("KG", "Kindagarten"),
         ("NUR", "Nursery"),
@@ -16,9 +19,6 @@ class Book_Donor(models.Model):
         default = "KG",
         db_index=True
     )
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    book_amount = models.IntegerField()
     phone_number = models.CharField(max_length=11)
     email = models.EmailField()
     def __str__(self):
@@ -26,6 +26,9 @@ class Book_Donor(models.Model):
         return name
   
 class Book_Receiver(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    book_amount = models.IntegerField()
     SCHOOL_CLASS_LEVEL_CHOICES = [
         ("KG", "Kindagarten"),
         ("NUR", "Nursery"),
@@ -40,9 +43,6 @@ class Book_Receiver(models.Model):
         default = "KG",
         db_index=True
     )
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    book_amount = models.IntegerField()
     phone_number = models.CharField(max_length=11)
     email = models.EmailField()
     def __str__(self):
