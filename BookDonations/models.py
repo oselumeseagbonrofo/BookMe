@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 # Create your models here.
 class Book_Donor(models.Model):
     first_name = models.CharField(max_length=50)
@@ -19,6 +19,7 @@ class Book_Donor(models.Model):
         default = "KG",
         db_index=True
     )
+    drop_date = models.DateField(default=timezone.now)
     phone_number = models.CharField(max_length=11)
     email = models.EmailField()
     def __str__(self):
@@ -43,6 +44,9 @@ class Book_Receiver(models.Model):
         default = "KG",
         db_index=True
     )
+    school_name = models.CharField(max_length=100,default="OGS")
+    school_location = models.CharField(max_length=100,default="Ikeja")
+    drop_date = models.DateField(default=timezone.now)
     phone_number = models.CharField(max_length=11)
     email = models.EmailField()
     def __str__(self):

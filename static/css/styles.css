@@ -16,16 +16,14 @@ body{
     background-color: #F8FFF0;  
 }
 .button {
-    background-color: rgba(22,24,200,0.3);
+    background-color: rgba(26,30,210,0.3);
     border: none;
     color: white;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 30%;
 }
@@ -73,6 +71,9 @@ footer{
 .clear-text-decoration{
     text-decoration: none;
     color: black;
+}
+.clear-text-decoration:hover{
+    color:rgba(22,24,200,0.3);
 }
 .reach-out-section{
     background-color: #F8FFF0; 

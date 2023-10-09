@@ -1,0 +1,22 @@
+{% extends 'BookDonations/base.html' %}
+{% load static %}
+{% block 'title' %}
+    Receive
+{% endblock %}
+{% block 'main_content'%}
+    <div class = "title-section">
+        <h1>Apply for book reception</h1>
+        <p>
+            Please fill this form to register interest for books. Kindly note that this form should be filled either by <b>Adults</b>. 
+            School representatives would be most welcome.
+        </p>
+        <p>
+            <b>Books can only be delivered within Lagos</b>
+        </p>
+        <form action = {% url 'BookDonations:receive' %} method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="button" type="submit">Submit</button>
+        </form>
+</div>
+{% endblock %}
