@@ -3,7 +3,7 @@
 #### Description: BookMe is my CS50 final project. It is a website that enables people donate their used textbooks from school to people who apply on the website to receive them. It was built with Django, HTML, CSS, Javascript, Bootstrap and Postgres. The Postgres server is hosted on a docker container
 
 Bookme Project structure
-1.Bookme
+    Bookme
     -.venv
     -BookDonations
     -BookMe
@@ -18,7 +18,7 @@ Bookme Project structure
 2. BookMe: This is the Django project folder
 
 BookMe structure
-BookMe
+    BookMe
     -__init__.py
     -asgi.py
     -docker-compose.yaml
@@ -33,7 +33,7 @@ iv. urls.py: contains the urls for all Django apps used
 3. BookDonations: This is the app folder I created. BookDonations app handles accepting bookdonations and also receives requests for books. It stores the information to the database and displays it on the admin page to enable admin usage of the information
 
 BookDonations folder structure
-BookDonations
+    BookDonations
     -migrations
     -templates
     -__init__.py
@@ -46,7 +46,7 @@ BookDonations
     -views.py
 i. migrations: folder contains information on all model migrations/ changes carried out in this app
 ii. templates: the templates folder contains all the html files written for the project
-templates\BookDonations
+    templates\BookDonations
     -base.html
     -contact.html
     -donate.html
@@ -70,7 +70,7 @@ x. views.py: creates the various views for the BookDonations app
 
 4. static: contains all the static CSS, image and Javascript files used in the Django Project (BookMe)
 static folder structure
-static
+    static
     -css
     -images
     -js
