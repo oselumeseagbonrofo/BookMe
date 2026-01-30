@@ -4,48 +4,72 @@
   Home
 {% endblock %}
 {% block 'main_content' %}
-    <div class="px-4 py-5 text-center title-section">
-        <img class="d-block mx-auto mb-4 hero-image img-fluid" src={% static 'images/hero.webp' %} alt="child smiling in a library">
-        <h1 class="display-5 fw-bold text-body-emphasis">Spread a smile through books</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">At BookMe, we aim to spread smiles to everyone through books. <b>Join us in our mission.</b> Donate your used books and help spread knowledge to others</p>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <a href = "{% url 'BookDonations:donate' %}">
-              <button type="button" class="button">Donate</button>
-            </a>  
+    <!-- Hero Section -->
+    <div class="title-section text-center">
+        <div class="container">
+            <img class="d-block mx-auto mb-4 hero-image img-fluid" src="{% static 'images/hero.webp' %}" alt="child smiling in a library">
+            <h1 class="display-4 fw-bold mb-3">Spread a smile through books</h1>
+            <div class="col-lg-8 mx-auto">
+              <p class="lead mb-4">At BookMe, we aim to spread smiles to everyone through books. <b>Join us in our mission.</b> Donate your used books and help spread knowledge to children in Lagos.</p>
+              <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                <a href="{% url 'BookDonations:donate' %}" class="button">Donate Now</a>
+                <a href="{% url 'BookDonations:receive' %}" class="button btn-outline-primary" style="background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);">Request Books</a>
+              </div>
             </div>
         </div>
     </div>
+
+    <!-- About Section -->
     <div class="about-us-section">
-      <img alt="Two children smiling while reading a book " class="about-us-image img-fluid" src={% static 'images/about-us-image.jpeg' %} >
-        <h2 class="large-text">About us</h2>
-        <p class="large-text">At BookMe, we strive to help others. Our organization came into existence in 2023 inspired by our founder's desire to help others. 
-          You can become a member of this family that is dedicated to spread joy to millions of students and readers in Lagos.</p>
-          <a href = "{% url 'BookDonations:donate' %}">
-            <button class="button" type="button">Join us</button>
-          </a>
-          <div class="statistics">
-            <h3 class="centered-text">Our impact<h3>
-            <ul>
-              <li class="impact-list centered-text">
-                  <b><p id="school-count"><p></b> 
-                  <p>Schools that have received books</p>
-              </li>
-              <li class="impact-list centered-text">
-                  <b><p id="book-count">300<p></b>
-                  <p>Books given out</p>
-                  
-              </li>
-            </ul>
-          </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img alt="Two children smiling while reading a book" class="about-us-image img-fluid w-100" src="{% static 'images/about-us-image.jpeg' %}">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="display-6 fw-bold mb-4">About Us</h2>
+                    <p class="mb-4">At BookMe, we strive to help others. Our organization came into existence in 2023 inspired by our founder's desire to help others. 
+                      You can become a member of this family that is dedicated to spread joy to millions of students and readers in Lagos.</p>
+                    <a href="{% url 'BookDonations:donate' %}" class="button donate-button">Join Our Family</a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Impact Section -->
+    <div class="py-5 bg-light">
+        <div class="container px-4 py-5" id="featured-3">
+            <h2 class="pb-2 border-bottom text-center mb-5">Our Impact</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-2 justify-content-center text-center">
+              <div class="feature col">
+                <div class="impact-list">
+                  <h3 class="display-3 fw-bold text-primary" id="school-count">0</h3>
+                  <p class="fs-5 text-muted">Schools that have received books</p>
+                </div>
+              </div>
+              <div class="feature col">
+                <div class="impact-list">
+                  <h3 class="display-3 fw-bold text-primary" id="book-count">300</h3>
+                  <p class="fs-5 text-muted">Books given out to children</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reach Out Section -->
     <div class="reach-out-section">
-      <img alt="smiling Nigerian school children" class="reach-out-image img-fluid" src="{% static '/images/receive-image.webp' %}">
-      <h2>Reach out / Receive</h2>
-      <p>Schools and parents are welcome to apply to enable their children join the reading fun. 
-        Just click on the button below to apply</p>
-      <a href= {% url 'BookDonations:receive' %}>
-        <button class="button" type="button">Receive</button>
-      </a>  
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img alt="smiling Nigerian school children" class="reach-out-image img-fluid w-100" src="{% static '/images/receive-image.webp' %}">
+                </div>
+                <div class="col-lg-6 pe-lg-5">
+                    <h2 class="display-6 fw-bold mb-4">Reach out / Receive</h2>
+                    <p class="mb-4">Are you a school representative or a parent in Lagos? We're here to help provide books to children who need them. Schools and parents are welcome to apply to enable their children join the reading fun.</p>
+                    <a href="{% url 'BookDonations:receive' %}" class="button">Apply for Books</a>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
